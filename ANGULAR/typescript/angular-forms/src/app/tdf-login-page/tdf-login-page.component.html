@@ -1,0 +1,14 @@
+<p>tdf-login-page works!</p>
+<div>
+    <h2>login page using tamplet driven form</h2>
+    <form #loginRef="ngForm" (ngSubmit)="checkUserDetails(loginRef)">
+        <label> EMAIL</label>
+        <input type="email" name="email" ngModel required/><br>
+        <label> PASSWORD </label>
+        <input type="password" name="password" ngModel required/><br>
+        <input type="submit" name="submit" [disabled]="loginRef.invalid"/>
+        <input type="reset" name="reset"/>
+        <span style="color: brown;"> {{msg}}</span>
+
+    </form>
+</div>
